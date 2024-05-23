@@ -42,6 +42,11 @@ header {
     99: This value sets the z-index of the header to a relatively high number,
     ensuring it appears on top of most other elements on the page (assuming they don't have a higher z-index). */
     z-index: 99;
+    /* the width of the header across screen*/
+    width: 100%;
+    /* horizontal, vertical, blur, color*/
+    box-shadow: 0 2px 2px #3a3a3a;
+
 }
 
 h1 {
