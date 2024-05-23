@@ -145,7 +145,7 @@ footer {
     background-color: orange;
 }
 
-/* media query: tablets and larger (768px adnd up) */
+/* media query: tablets and larger (768px and up) */
 @media screen and (min-width:768px) {
     /* Header */
     nav {
@@ -173,4 +173,32 @@ footer {
     .nav-toggle-label {
       display: none;
     }
+
+    #logo {
+      font-size: 280%;
+      /* Line height: The logo text has a line height of 75px.
+      This ensures enough space between lines of text within the logo itself,
+      making it fit comfortably within a vertical space of 75 pixels. */
+      line-height: 75px;
+      /* Margins: The logo has no top or bottom margin (set to 0).
+      It does have a left and right margin of 0.5rem units (pixels or another unit depending on your setup).
+      This adds some horizontal breathing room around the logo. */
+      margin: 0 0.5rem
+    }
+
+    main {
+      /* Push content down so header wont block it */
+      margin-top: 79px;
+    }
+}
+
+/* media query: tablets and larger (992px and up) */
+@media screen and (min-width:992px) {
+
+  /* every id with an <a> take will be affected */
+  #menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+
+  }
+  
 }
