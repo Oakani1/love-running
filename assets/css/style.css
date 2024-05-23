@@ -21,7 +21,7 @@ body {
     display: flex;
 
     flex-direction: column;
-    color: #e45715;
+    color: #3a3a3a;
     font-family: "Lato", sans-serif;
 }
 
@@ -48,14 +48,57 @@ header {
     box-shadow: 0 2px 2px #3a3a3a;
 
 }
+/* This means that all elements under header that are <a> will be affected*/
+header a {
+  /* This means no hyperlink styles will be added*/
+  text-decoration: none;
+  /*Inherits the color from body */
+  color: inherit;
+}
 
 h1 {
     font-family: "oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525
+}
+
+/*id attached to ul*/
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+/* menu > li targets everything under meu that is li*/
+#menu >li {
+    /* added margin to each item in the list*/
+    margin-bottom: 1rem;
+
+}
+
+/* add highlight to let people know where they are */
+.active {
+  /*add line to text, could use text decoration*/
+  border-bottom: 1px solid #3a3a3a   
+}
+
+/* Navbar styles with dropdown toggle */
+nav {
+    /* absolute postions it relative to the neasrst psostion ancestor */
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    /* horizontal, vertical, blur, color*/
+    box-shadow: 0 2px 2px #3a3a3a;
+    padding: 0 1rem;
+    /* Aligns content of element to left using 0 */
+    left: 0;
+    display: none;
 }
 
 /* Main content */
 main {
-    background-color: lightblue;
+    background-color: rgb(18, 243, 138);
 }
 
 /* Footer */
