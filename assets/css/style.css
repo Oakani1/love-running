@@ -46,6 +46,12 @@ header {
     width: 100%;
     /* horizontal, vertical, blur, color*/
     box-shadow: 0 2px 2px #3a3a3a;
+    /* All items in header become part of flexbox */
+    display: flex;
+    /* decides space inbtween flexbox elements */
+    justify-content: space-between;
+    /*aligns items in flexbox to their base */
+    align-items: baseline;
 
 }
 /* This means that all elements under header that are <a> will be affected*/
@@ -94,7 +100,28 @@ nav {
     /* Aligns content of element to left using 0 */
     left: 0;
     display: none;
+    /* this means the top of the element should start at the bottom of the parent
+    this pushes the nav below the parent header */
+    top: 100%;
 }
+
+/* Nav toggle */
+/*Code added to html to control toggle of nav
+  <input type="checkbox" id="nav-toggle" name="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label">x</label> */
+  /* when text box is checked use ~ to target adjoining SIBLING nav element*/
+  #nav-toggle:checked~nav {
+    display: block;
+  }
+
+  /* Hides Nav toggle */
+  #nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    font-size: 2rem;
+  }
 
 /* Main content */
 main {
