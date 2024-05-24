@@ -136,9 +136,18 @@ main {
     (flex-basis: auto) Maintains its default size initially. */
     flex: 1 0 auto;
     margin-top: 47px;
-    
-
 }
+
+/* hero Section */
+  #hero {
+    height: 600px;
+    width: 100%;
+    /* center center: This positions the image horizontally and vertically in the center of its container.
+    /cover: This ensures the image fills the entire background area without stretching or distorting the image.
+    It accomplishes this by maintaining the image's original aspect ratio. */
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+
+  }
 
 /* Footer */
 #social-networks {
