@@ -196,9 +196,30 @@ main {
     padding: 0 20px;
 }
 
+#benefits-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
 hr {
   border-top: 1px solid #3a3a3a;
   margin: 5px 0;
+}
+
+#circle-cover-bg {
+  background: url("../images/reasons-image.webp") no-repeat center center/cover;
+  /*90vw: This translates to "90 viewports wide."  So, if the user's viewport (browser window) is 1000 pixels wide,
+  then 90vw would be equivalent to 900 pixels (1000px * 90%) */
+  height: 90vw;
+  width: 90vw;
+  margin-bottom: 20px;
+  /* makes it a circle */
+  border-radius: 50%;
+  /* stops it from getting too big in responsive site */
+  max-width: 300px;
+  max-height: 300px;
 }
 
 /* Footer */
