@@ -25,6 +25,13 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+h1, h2, h3 {
+  font-family: "oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #252525
+}
+
 
 /* Header */
 header {
@@ -62,12 +69,7 @@ header a {
   color: inherit;
 }
 
-h1 {
-    font-family: "oswald", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525
-}
+
 
 /*id attached to ul*/
 #menu {
@@ -149,6 +151,29 @@ main {
 
   }
 
+  #cover-text {
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    /* By setting position: absolute;, the element (#cover-text) is essentially taken out of the normal flow of the document and can be positioned freely. */
+    position: absolute;
+    /* bottom: 30px; places the bottom edge of that element 30 pixels above the bottom edge of its container. */
+    /* position has to be set first */
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+       
+  }
+
+  #cover-text > h2, #cover-text > h3 {
+    /* > targets direct children of the div */
+    color: #ffffff;
+
+  }
+
+
+
 /* Footer */
 #social-networks {
     text-align: center;
@@ -215,6 +240,11 @@ footer a {
     main {
       /* Push content down so header wont block it */
       margin-top: 79px;
+    }
+
+    #cover-text {
+      width: 300px;
+      right: 50px;
     }
 }
 
