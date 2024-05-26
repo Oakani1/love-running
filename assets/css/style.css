@@ -224,6 +224,35 @@ hr {
   max-height: 300px;
 }
 
+#times {
+  /* Allows wrapping of boxes in different screen sizes with out media query */
+  background: url("../images/dublin-city.webp") no-repeat center/cover;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Times section styling */
+#times div {
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, .6);
+  padding: 15px;
+  text-align: center;
+  /* sets when the divs start growing*/
+  /* wont wrap if screen is less than 400px */
+  /* flex-basis sets the initial size, not the final size.
+  The final size of the element can be influenced by flex-grow and flex-shrink properties */
+  flex-basis: 200px;
+  /* Allows dive to grow when screen sizes increases */
+  flex-grow: 1;
+  border: 2px solid white;
+}
+
+#times h3 {
+  /* color of header */
+  color:#fafafa
+
+}
+
 /* Footer */
 #social-networks {
     text-align: center;
