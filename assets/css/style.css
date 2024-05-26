@@ -290,6 +290,15 @@ footer a {
 
 }
 
+/* media query: large ot landscape phones (576px and up) */
+@media screen and (min-width:576px) {
+    #photos {
+      column-count: 2;
+      column-gap: 0;
+    }
+
+}
+
 /* media query: tablets and larger (768px and up) */
 @media screen and (min-width:768px) {
     /* Header */
@@ -371,6 +380,16 @@ footer a {
   order:1;
 }
 
+  /* gallery layout */
+  #photos {
+    column-count: 3;
+    column-gap: 0;
+  }
+
+}
+
+
+
 /* media query: tablets and larger (992px and up) */
 @media screen and (min-width:992px) {
 
@@ -379,6 +398,11 @@ footer a {
     border-bottom: 1px solid #3a3a3a;
 
   }
+
+    /* gallery layout */
+    #photos {
+      column-count: 4;
+      column-gap: 0;
   
 }
 
