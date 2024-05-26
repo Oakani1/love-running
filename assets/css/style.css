@@ -146,6 +146,7 @@ main {
     /cover: This ensures the image fills the entire background area without stretching or distorting the image.
     It accomplishes this by maintaining the image's original aspect ratio. */
     background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
 
   }
 
@@ -161,6 +162,7 @@ main {
     min-height: 200px;
     padding-top: 40px;
     padding-left: 10px;
+
        
   }
 
@@ -289,15 +291,40 @@ footer a {
       /* Push content down so header wont block it */
       margin-top: 79px;
     }
-
+    /* Hero section */
     #cover-text {
       width: 300px;
       right: 50px;
-    }
 }
 
-#reasons {
-  font-style: ca;
+    #benefits-physical,
+    #benefits-mental {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+}
+
+#benefits-physical > div,
+#benefits-mental > div {
+  width: 75%;
+}
+
+
+#benefits-mental > div {
+  /* he code ensures that any text content within the child divs of the element with id "#benefits-mental" will be aligned to the right side. */
+  text-align: end;
+  /* If the parent element uses Flexbox, the child divs themselves will be stacked vertically and positioned at the bottom of their parent element.*/
+  align-self: flex-end;
+}
+
+
+#reasons > div{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#benefits-mental{
+  order:1;
 }
 
 /* media query: tablets and larger (992px and up) */
@@ -309,4 +336,49 @@ footer a {
 
   }
   
+}
+
+/* media query: tablets and larger (1200px and up) */
+@media screen and (min-width:1200px) {
+
+#benefits {
+  display: flex;
+  flex-direction: row;
+}
+
+#benefits > div {
+  flex: 1;
+}
+
+#benefits-image {
+  order: 0;
+}
+
+#benefits-mental {
+  order: 1;
+}
+
+/* flex-start: This is a value for the align-self property.
+It instructs the browser to position the top edges of the child
+ divs at the top of their parent element along the vertical axis. */
+#benefits-mental > div {
+  align-self: flex-start;
+}
+
+/* This code ensures that if the parent element uses Flexbox,
+all the child divs within "#benefits-physical" will be stacked
+ vertically and positioned at the bottom of their parent element. */
+#benefits-physical > div {
+  align-self: flex-end;
+}
+
+/* #reasons > div{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#benefits-mental{
+  order:1;
+} */
+
 }
