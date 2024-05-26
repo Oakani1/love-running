@@ -272,6 +272,18 @@ hr {
 
 }
 
+/* gallery Page */
+#photos img {
+  width: 100%;
+  /* keeps alt text readable */
+  line-height: 1em;
+}
+
+#photos {
+  /* removes the white space in bwteen the photos */
+  line-height: 0;
+}
+
 
 footer a {
     text-decoration: none;
